@@ -1,13 +1,14 @@
 package com.example.innobridge.perusahaan
 
 import android.os.Bundle
-import android.view.*
+import android.view.View
+import android.view.ViewGroup
+import android.view.LayoutInflater
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.innobridge.R
-import com.google.android.material.card.MaterialCardView
 
 class ManageProposalFragment : Fragment(R.layout.fragment_manage_proposal) {
 
@@ -18,6 +19,7 @@ class ManageProposalFragment : Fragment(R.layout.fragment_manage_proposal) {
 
         rvProposals = view.findViewById(R.id.rvProposals)
 
+        // ✅ Data dummy (sementara biar tidak error)
         val dataProposal = listOf(
             "Solusi AI untuk SDGs 9",
             "Sistem Monitoring Air Bersih",
@@ -30,14 +32,13 @@ class ManageProposalFragment : Fragment(R.layout.fragment_manage_proposal) {
         rvProposals.adapter = ProposalAdapter(dataProposal)
     }
 
-    // Adapter
+    // ✅ Adapter
     class ProposalAdapter(private val listProposal: List<String>) :
         RecyclerView.Adapter<ProposalAdapter.ViewHolder>() {
 
         class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
             val tvNama: TextView = view.findViewById(R.id.tvNamaMahasiswa)
             val tvJudul: TextView = view.findViewById(R.id.tvJudulSolusi)
-            val cvStatus: MaterialCardView = view.findViewById(R.id.cvStatusLabel)
         }
 
         override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -47,6 +48,10 @@ class ManageProposalFragment : Fragment(R.layout.fragment_manage_proposal) {
         }
 
         override fun onBindViewHolder(holder: ViewHolder, position: Int) {
+            // ✅ FIX context
+            val ctx = holder.itemView.context
+
+            // ⚠️ sementara pakai ini dulu (AMAN)
             holder.tvNama.text = "Mahasiswa Inovator ${position + 1}"
             holder.tvJudul.text = listProposal[position]
         }
