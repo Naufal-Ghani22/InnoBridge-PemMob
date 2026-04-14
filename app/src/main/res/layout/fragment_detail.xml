@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#E3F2FF">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Judul -->
+        <TextView
+            android:id="@+id/tvJudul"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Judul Challenge"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:textColor="#042E7B"
+            android:fontFamily="@font/plus_jakarta_sans_bold" />
+
+        <!-- Perusahaan -->
+        <TextView
+            android:id="@+id/tvPerusahaan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nama Perusahaan"
+            android:textSize="14sp"
+            android:textColor="#212121"
+            android:fontFamily="@font/poppins_regular"
+            android:layout_marginTop="6dp"/>
+
+        <!-- Kategori -->
+        <TextView
+            android:id="@+id/tvKategori"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Kategori"
+            android:textSize="12sp"
+            android:textColor="#1883FF"
+            android:layout_marginTop="6dp"
+            android:fontFamily="@font/poppins_regular"/>
+
+        <!-- Garis pemisah -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#99CAFF"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="12dp"/>
+
+        <!-- Deskripsi -->
+        <TextView
+            android:id="@+id/tvDeskripsi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Deskripsi lengkap challenge..."
+            android:textSize="14sp"
+            android:textColor="#212121"
+            android:lineSpacingExtra="4dp"
+            android:fontFamily="@font/poppins_regular"/>
+
+    </LinearLayout>
+
+</ScrollView>
