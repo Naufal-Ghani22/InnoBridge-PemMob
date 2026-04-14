@@ -6,7 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.example.innobridge.R
-import com.example.innobridge.mahasiswa.BerandaFragment
+import com.example.innobridge.auth.LoginFragment
 
 class MainActivity : AppCompatActivity() {
 
@@ -17,7 +17,7 @@ class MainActivity : AppCompatActivity() {
 
         if (savedInstanceState == null) {
             supportFragmentManager.beginTransaction()
-                .replace(R.id.mainContainer, BerandaFragment())
+                .replace(R.id.mainContainer, LoginFragment())
                 .commit()
         }
 
