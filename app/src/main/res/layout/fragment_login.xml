@@ -6,13 +6,12 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="InnoBridge"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        android:textColor="@color/navy_main"/>
+    <ImageView
+        android:id="@+id/ivLogo"
+        android:layout_width="150dp"
+        android:layout_height="43dp"
+        android:layout_marginBottom="48dp"
+        android:src="@drawable/teks_innobridge" />
 
     <EditText
         android:id="@+id/etEmail"

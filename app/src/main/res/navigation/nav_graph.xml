@@ -86,7 +86,7 @@
             app:popUpToInclusive="true" />
     </fragment>
 
-    <!-- Mahasiswa Flow -->
+    <!-- App Flow -->
     <fragment
         android:id="@+id/berandaFragment"
         android:name="com.example.innobridge.mahasiswa.BerandaFragment"
@@ -101,11 +101,13 @@
         android:id="@+id/portfolioFragment"
         android:name="com.example.innobridge.mahasiswa.PortfolioFragment"
         android:label="Portfolio"
-        tools:layout="@layout/fragment_portfolio">
-        <action
-            android:id="@+id/action_portfolioFragment_to_postChallengeFragment"
-            app:destination="@id/postChallengeFragment" />
-    </fragment>
+        tools:layout="@layout/fragment_portfolio" />
+
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.example.innobridge.mahasiswa.ProfileFragment"
+        android:label="Profile"
+        tools:layout="@layout/fragment_profile" />
 
     <fragment
         android:id="@+id/detailFragment"
