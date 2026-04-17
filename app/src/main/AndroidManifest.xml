@@ -1,5 +1,5 @@
-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.innobridge">
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
 
     <application
         android:allowBackup="true"
@@ -9,7 +9,7 @@
         android:theme="@style/Theme.InnoBridge">
 
         <activity
-            android:name=".core.MainActivity"
+            android:name="com.example.innobridge.core.MainActivity"
             android:exported="true">
 
             <intent-filter>
